@@ -1,0 +1,57 @@
+.chat-message {
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid rgb(0, 255, 21); */
+  flex: 1;
+  padding: 5px;
+}
+
+.avatar {
+  border-radius: 50%;
+  /* order: 1; */
+  width: 60px;
+  padding: 5px;
+}
+
+.user-and-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  padding: 5px;
+}
+
+.message {
+  /* border: 2px solid red; */
+  /* color: #fff; */
+  background-color: #f3f3f3;
+  border-radius: 10%;
+  height: 50%;
+  padding: 5px;
+}
+
+.sent {
+  color: #fff;
+  background-color: #1185f7;
+  border-radius: 10%;
+  height: 50%;
+  padding: 5px;
+}
+.received {
+  color: #000;
+  background-color: #e9e9eb;
+  border-radius: 10%;
+  height: 50%;
+  padding: 5px;
+}
+
+/*
+  The current user's messages should have:
+  - a text color of #FFF
+  - a background color of #1185f7
+
+  Other participant's messages should have:
+  - a text color of #000
+  - a background color of #e9e9eb
+*/
