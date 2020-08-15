@@ -13,22 +13,22 @@ import "./ChatStream.css";
 const ChatStream = (props) => {
   return (
     <section className="chat-stream">
-      {props.messages.map((message, index) => {
-        let user = props.currentUser.username;
-        let sentOrReceived = "";
-        if (message.user.username === user) {
-          sentOrReceived = "sent";
+      {props.messages.map((message) => {
+        let messageType;
+        if (message.user === props.currentUser) {
+          messageType = "sent";
         } else {
-          sentOrReceived = "received";
+          messageType = "received";
         }
+
         return (
-          <div className="chat-stream-message">
-            <ChatMessage
-              key={"msg" + index}
-              message={message}
-              sentOrReceived={sentOrReceived}
-            />
-          </div>
+          <ChatMessage
+            key={Math.random() * 100000}
+            user={message.user.username}
+            body={message.body}
+            messageType={messageType}
+            avatar={message.user.avatar}
+          />
         );
       })}
     </section>
